@@ -1,6 +1,5 @@
-def transform_string(number: int) -> str:
+def transform_string(n: int) -> str:
     """Возвращает строку вида 'N процентов' с учётом склонения по указанному number"""
-    n = number
     # если 11 - 14, выводим "процентов"
     if n >= 11 and n <= 14:
         result = f'{n} процентов'
@@ -13,7 +12,8 @@ def transform_string(number: int) -> str:
     # остаётся единственый вариант - число заканчивается на 1, то "процент"
     else:
         result = f'{n} процент'
-    return result # возвращает отформатированную сторку
+    # возвращает отформатированную сторку
+    return result
 
 
 for n in range(1, 101):  # по заданию учитываем только значения от 1 до 100
