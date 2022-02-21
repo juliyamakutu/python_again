@@ -12,5 +12,6 @@ def odd_nums(number: int) -> Generator[int, None, None]:
 n = 15
 generator = odd_nums(n)
 for _ in range(1, n + 1, 2):
-    print(next(generator))
+    print(next(generator), end=' ')
+print()
 # next(generator)  # если раскомментировать, то должно падать в traceback по StopIteration
