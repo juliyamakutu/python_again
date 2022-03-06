@@ -1,0 +1,107 @@
+1. установлен ли requests в системе?
+
+makutu@MacBook-Pro-Ulia python_again % pip3 show requests
+WARNING: Package(s) not found: requests
+
+2. устанавливаем пакет requests
+
+makutu@MacBook-Pro-Ulia python_again % pip3 install requests
+Defaulting to user installation because normal site-packages is not writeable
+Collecting requests
+  Downloading requests-2.27.1-py2.py3-none-any.whl (63 kB)
+     |████████████████████████████████| 63 kB 2.0 MB/s
+Collecting urllib3<1.27,>=1.21.1
+  Downloading urllib3-1.26.8-py2.py3-none-any.whl (138 kB)
+     |████████████████████████████████| 138 kB 2.0 MB/s
+Collecting idna<4,>=2.5; python_version >= "3"
+  Downloading idna-3.3-py3-none-any.whl (61 kB)
+     |████████████████████████████████| 61 kB 7.3 MB/s
+Collecting charset-normalizer~=2.0.0; python_version >= "3"
+  Downloading charset_normalizer-2.0.12-py3-none-any.whl (39 kB)
+Collecting certifi>=2017.4.17
+  Downloading certifi-2021.10.8-py2.py3-none-any.whl (149 kB)
+     |████████████████████████████████| 149 kB 2.0 MB/s
+Installing collected packages: urllib3, idna, charset-normalizer, certifi, requests
+  WARNING: The script normalizer is installed in '/Users/makutu/Library/Python/3.8/bin' which is not on PATH.
+  Consider adding this directory to PATH or, if you prefer to suppress this warning, use --no-warn-script-location.
+Successfully installed certifi-2021.10.8 charset-normalizer-2.0.12 idna-3.3 requests-2.27.1 urllib3-1.26.8
+WARNING: You are using pip version 20.2.3; however, version 22.0.3 is available.
+You should consider upgrading via the '/Library/Developer/CommandLineTools/usr/bin/python3 -m pip install --upgrade pip' command.
+
+3. проверяем версию пакета requests
+
+makutu@MacBook-Pro-Ulia python_again % pip3 show requests
+Name: requests
+Version: 2.27.1
+Summary: Python HTTP for Humans.
+Home-page: https://requests.readthedocs.io
+Author: Kenneth Reitz
+Author-email: me@kennethreitz.org
+License: Apache 2.0
+Location: /Users/makutu/Library/Python/3.8/lib/python/site-packages
+Requires: certifi, urllib3, idna, charset-normalizer
+Required-by:
+
+4. активируем виртвальное окружение (уже было создано PyCharm)
+
+makutu@MacBook-Pro-Ulia python_again % source venv/bin/activate
+(venv) makutu@MacBook-Pro-Ulia python_again %
+
+5. установлен ли пакет request в виртуально окружении?
+
+(venv) makutu@MacBook-Pro-Ulia python_again % pip3 show requests
+WARNING: Package(s) not found: requests
+
+6. устанавливаем пакет request версии 2.22 в виртуальном окружении
+
+(venv) makutu@MacBook-Pro-Ulia python_again % pip3 install requests==2.22
+Collecting requests==2.22
+  Downloading requests-2.22.0-py2.py3-none-any.whl (57 kB)
+     |████████████████████████████████| 57 kB 864 kB/s
+Collecting urllib3!=1.25.0,!=1.25.1,<1.26,>=1.21.1
+  Downloading urllib3-1.25.11-py2.py3-none-any.whl (127 kB)
+     |████████████████████████████████| 127 kB 738 kB/s
+Collecting idna<2.9,>=2.5
+  Downloading idna-2.8-py2.py3-none-any.whl (58 kB)
+     |████████████████████████████████| 58 kB 967 kB/s
+Collecting certifi>=2017.4.17
+  Using cached certifi-2021.10.8-py2.py3-none-any.whl (149 kB)
+Collecting chardet<3.1.0,>=3.0.2
+  Downloading chardet-3.0.4-py2.py3-none-any.whl (133 kB)
+     |████████████████████████████████| 133 kB 232 kB/s
+Installing collected packages: urllib3, idna, chardet, certifi, requests
+Successfully installed certifi-2021.10.8 chardet-3.0.4 idna-2.8 requests-2.22.0 urllib3-1.25.11
+WARNING: You are using pip version 21.1.2; however, version 22.0.3 is available.
+You should consider upgrading via the '/Users/makutu/PycharmProjects/python_again/venv/bin/python -m pip install --upgrade pip' command.
+
+7. проверяем версию пакета request в вирутально окружении
+
+(venv) makutu@MacBook-Pro-Ulia python_again % pip3 show requests
+Name: requests
+Version: 2.22.0
+Summary: Python HTTP for Humans.
+Home-page: http://python-requests.org
+Author: Kenneth Reitz
+Author-email: me@kennethreitz.org
+License: Apache 2.0
+Location: /Users/makutu/PycharmProjects/python_again/venv/lib/python3.8/site-packages
+Requires: idna, urllib3, chardet, certifi
+Required-by:
+
+8. деактивируем виртуальное окружение
+
+(venv) makutu@MacBook-Pro-Ulia python_again % deactivate
+
+9. проверяем версию пакета requests
+
+makutu@MacBook-Pro-Ulia python_again % pip3 show requests
+Name: requests
+Version: 2.27.1
+Summary: Python HTTP for Humans.
+Home-page: https://requests.readthedocs.io
+Author: Kenneth Reitz
+Author-email: me@kennethreitz.org
+License: Apache 2.0
+Location: /Users/makutu/Library/Python/3.8/lib/python/site-packages
+Requires: idna, urllib3, charset-normalizer, certifi
+Required-by:
